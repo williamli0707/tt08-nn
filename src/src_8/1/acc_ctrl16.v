@@ -1,7 +1,7 @@
 module acc_ctrl16( // 16 cycle control with 3 clock cycle delay
-    en, sel, clk, rst
+    state, clk, rst
     );
-    output en, sel;
+    output [3:0] state;
     input clk, rst;
 
     reg [3:0] c_state, n_state; // 4-bit state to hold 16 states
@@ -58,7 +58,5 @@ module acc_ctrl16( // 16 cycle control with 3 clock cycle delay
         endcase
     end
 
-    assign sel = (c_state == s1) ? 1'b1 : 1'b0; // when sel high add the bias
-    assign en = (c_state == s16) ? 1'b1 : 1'b0; // when en high finish the ACC
-
+    assign state = c_state;
 endmodule

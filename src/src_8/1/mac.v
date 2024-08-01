@@ -20,7 +20,6 @@ module mac(sumOut,clk, pixelsIn, weightsIn);
         weights<= weightsIn;
         s1reg <= s1;
         sumOut <= sum;
-        
     end
     
     genvar multGen, addGen;
