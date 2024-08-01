@@ -26,9 +26,9 @@ module acc_ctrl16( // 16 cycle control with 3 clock cycle delay
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            c_state <= s1;
-            cycle_count <= 2'b00;
-        end else if (cycle_count == 2'd2) begin
+            c_state <= s16;
+            cycle_count <= 2'd2;
+        end else if (cycle_count == 2'd2 && !rst) begin
             c_state <= n_state;
             cycle_count <= 2'b00;
         end else begin

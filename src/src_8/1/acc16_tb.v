@@ -32,16 +32,18 @@ module acc16_tb;
         din = 20'd0;
         b = 8'd0;
 
-        // Wait 30 ns for global reset to finish
-        #30;
+        // Wait 35 ns for global reset to finish
+        #35;
         rst = 0;
 
         // Apply test cases
         // Each test case corresponds to a different state every 3 clock cycles
-
-        #25
+        
+        // Test case 0
+        din = 20'd10;  
+        #30
         // Test case 1: State 0
-        din = 20'd1;  b = 8'd1;  // Add 1 with bias 1
+        din = 20'd1; b = 8'd1;  // Add 1 with bias 1
         #30;  // Wait enough cycles for state transition
 
         // Test case 2: State 1
@@ -100,8 +102,6 @@ module acc16_tb;
         din = 20'd15; 
         #30;  // Wait enough cycles for state transition
 
-        // Test case 16: State 15
-        din = 20'd16; 
         #30;  // Wait enough cycles for state transition
 
         // Finish simulation

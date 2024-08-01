@@ -27,9 +27,9 @@ sum, clk, rst, din, b
         else if (state == 4'd1) begin
             acc <= acc + din + b_ext; // add bias and input data on s2 instead of s1 just because in case
         end else if (state == 4'd15) begin
-            acc <= acc + din; // Accumulate input data // accumulate one more time
-            sum <= acc;    // Output the accumulated sum when in state s16
-            acc <= 24'd0;  // Reset accumulator for the next cycle
+            acc = acc + din; // Accumulate input data // accumulate one more time
+            sum = acc;    // Output the accumulated sum when in state s16
+            acc = 24'd0;  // Reset accumulator for the next cycle
         end else begin
             acc <= acc + din; // Accumulate input data
         end

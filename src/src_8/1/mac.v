@@ -7,7 +7,7 @@ module mac(sumOut,clk, pixelsIn, weightsIn);
     
     reg [127:0] pixels, weights;
     reg [19:0] sumOut;
-    reg [135:0] s1reg;
+    reg [135:0] s1reg;     
     wire [19:0] sum;
     wire [255:0]p; // products output
     wire [135:0] s1; //Outputs of 8 adders each of 17 bit: 8*17 
