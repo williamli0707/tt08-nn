@@ -18,13 +18,19 @@ project:
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "project.v"
-    - "src_8/acc_ctrl16.v"
-    - "src_8/acc16.v"
-    - "src_8/adder.v"
-    - "src_8/adder24.v"
-    - "src_8/mac.v"
-    - "src_8/multiplier.v"
-    - "src_8/relu.v"
+    - "fsm_16_states.v"
+    - "fsm_16_states.v"
+    - "fsm_16_states.v"
+    - "layer1.v"
+    - "layer1.v"
+    - "layer1.v"
+    - "neuron.v"
+    - "neuron_hidden.v"
+    - "outlayer.v"
+    - "project.v"
+    - "relu.v"
+    - "top_layer.v"
+    
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
