@@ -27,7 +27,6 @@ project:
     - "neuron.v"
     - "neuron_hidden.v"
     - "outlayer.v"
-    - "project.v"
     - "relu.v"
     - "top_layer.v"
     
