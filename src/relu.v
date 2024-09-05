@@ -7,11 +7,11 @@ module relu #(
 
 always @(*) begin
     if (in >= 128) begin
-        out = 8'd127;  // Output clamped to 127, as 128 is out of 8-bit signed range
+        out = 8'd127;  // Clamp to 127
     end else if (in <= -128) begin
-        out = -8'd128;  // Output clamped to -128, which is the minimum for 8-bit signed
+        out = -8'd128;  // Clamp to -128
     end else begin
-        out = in[7:0];  // Truncate input to 8-bit output
+        out = $signed(in[7:0]);  // Safely truncate to 8-bit signed output
     end
 end
 
